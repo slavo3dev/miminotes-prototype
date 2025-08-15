@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MimiNotes – Smart timestamp notes for YouTube</title>
+    <meta
+      name="description"
+      content="MimiNotes is a Chrome extension that lets you take timestamped notes on YouTube and jump back to the exact moment later."
+    />
+    <link rel="icon" href="/mimi-logo.png" />
+    <!-- Tailwind CSS (CDN for easy deploy). For production, you can prebuild if you want. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#0b0b0b',
+              smoke: '#e5e7eb',
+              zincLine: '#27272a',
+            },
+            boxShadow: {
+              soft: '0 12px 30px rgba(0,0,0,0.5)',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-ink text-smoke antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="flex h-16 items-center justify-between border-b border-zincLine">
+          <a href="#" class="flex items-center gap-3">
+            <img src="/mimi-logo.png" alt="MimiNotes logo" class="h-7 w-7 rounded" />
+            <span class="font-semibold tracking-wide">MimiNotes</span>
+          </a>
+          <nav class="hidden items-center gap-6 md:flex">
+            <a href="#features" class="hover:opacity-80">Features</a>
+            <a href="#how" class="hover:opacity-80">How it works</a>
+            <a href="#screens" class="hover:opacity-80">Screenshots</a>
+            <a href="#support" class="hover:opacity-80">Support</a>
+            <a href="#privacy" class="hover:opacity-80">Privacy</a>
+            <a
+              href="https://chrome.google.com/webstore/detail/REPLACE_WITH_STORE_ID"
+              class="rounded-xl border border-zincLine px-4 py-2 font-semibold hover:bg-white hover:text-black transition"
+              target="_blank" rel="noopener noreferrer"
+            >
+              Get the Extension
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 opacity-30" aria-hidden="true">
+        <div class="pointer-events-none absolute -left-24 top-20 h-80 w-80 rounded-full bg-white/5 blur-3xl"></div>
+        <div class="pointer-events-none absolute right-0 top-40 h-72 w-72 rounded-full bg-white/5 blur-3xl"></div>
+      </div>
+
+      <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+        <div>
+          <h1 class="mb-4 text-4xl font-bold leading-tight md:text-5xl">
+            Smart timestamp notes for YouTube
+          </h1>
+          <p class="mb-6 text-zinc-300">
+            Drop a note while watching and jump back to the exact second later. Sticky overlay + popup.
+            Clean, fast, and private.
+          </p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a
+              href="https://chrome.google.com/webstore/detail/REPLACE_WITH_STORE_ID"
+              class="inline-flex items-center gap-3 rounded-2xl border border-zincLine bg-white px-5 py-3 font-semibold text-black shadow-soft hover:opacity-95 transition"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 2C7.589 4 4 7.589 4 12c0 1.93.686 3.705 1.832 5.086L17.086 5.832A7.933 7.933 0 0 0 12 4zm6.168 2.914L6.914 18.168A7.933 7.933 0 0 0 12 20c4.411 0 8-3.589 8-8 0-1.93-.686-3.705-1.832-5.086z"/></svg>
+              Add to Chrome
+            </a>
+            <a href="#how" class="rounded-2xl border border-zincLine px-5 py-3 hover:bg-white/5 transition">
+              See how it works
+            </a>
+          </div>
+          <p class="mt-3 text-xs text-zinc-400">
+            No sign-up • Notes stay on your device • Open Source (optional link)
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-zincLine bg-black/30 p-2 shadow-soft">
+          <!-- Replace with your GIF/screenshot -->
+          <img src="/screenshot-hero.png" alt="MimiNotes popup and sticky note overlay" class="rounded-xl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="border-t border-zincLine">
+      <div class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="mb-8 text-2xl font-semibold">Why you’ll love MimiNotes</h2>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-xl border border-zincLine bg-black/30 p-6">
+            <div class="mb-3 text-xl">📌 Timestamp notes</div>
+            <p class="text-zinc-300">
+              Save notes pinned to the exact second in any YouTube video. Click to jump back instantly.
+            </p>
+          </div>
+          <div class="rounded-xl border border-zincLine bg-black/30 p-6">
+            <div class="mb-3 text-xl">🗂 Organized by video</div>
+            <p class="text-zinc-300">
+              Notes are grouped per video and easy to scan. Export JSON or PDF anytime.
+            </p>
+          </div>
+          <div class="rounded-xl border border-zincLine bg-black/30 p-6">
+            <div class="mb-3 text-xl">🔄 Live sync</div>
+            <p class="text-zinc-300">
+              Sticky overlay and popup stay in sync using Chrome storage—no account needed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="border-t border-zincLine">
+      <div class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="mb-8 text-2xl font-semibold">How it works</h2>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-xl border border-zincLine bg-black/30 p-6">
+            <div class="mb-2 text-sm font-semibold text-zinc-300">1. Open YouTube</div>
+            <p class="text-zinc-300">Click the MimiNotes icon while watching a video.</p>
+          </div>
+          <div class="rounded-xl border border-zincLine bg-black/30 p-6">
+            <div class="mb-2 text-sm font-semibold text-zinc-300">2. Add a note</div>
+            <p class="text-zinc-300">Grab the timestamp and write your note in the popup or sticky overlay.</p>
+          </div>
+          <div class="rounded-xl border border-zincLine bg-black/30 p-6">
+            <div class="mb-2 text-sm font-semibold text-zinc-300">3. Jump back</div>
+            <p class="text-zinc-300">Click a note to jump to that exact moment. Export anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screens" class="border-t border-zincLine">
+      <div class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="mb-8 text-2xl font-semibold">Screenshots & Demo</h2>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-2xl border border-zincLine bg-black/30 p-2 shadow-soft">
+            <img src="/screenshot-popup.png" alt="MimiNotes popup" class="rounded-xl" />
+          </div>
+          <div class="rounded-2xl border border-zincLine bg-black/30 p-2 shadow-soft">
+            <img src="/screenshot-sticky.png" alt="MimiNotes sticky overlay" class="rounded-xl" />
+          </div>
+        </div>
+        <!-- Optional GIF row -->
+        <div class="mt-6 rounded-2xl border border-zincLine bg-black/30 p-2 shadow-soft">
+          <img src="/demo.gif" alt="MimiNotes demo" class="rounded-xl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Support -->
+    <section id="support" class="border-t border-zincLine">
+      <div class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="mb-2 text-2xl font-semibold">Support</h2>
+        <p class="mb-6 text-zinc-300">
+          Questions or feedback? Check the tips below or send us an email.
+        </p>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-xl border border-zincLine bg-black/30 p-6">
+            <h3 class="mb-3 font-semibold">Troubleshooting</h3>
+            <ul class="list-disc space-y-2 pl-6 text-zinc-300">
+              <li>After installing, refresh YouTube tabs to load the content script.</li>
+              <li>If the sticky note doesn’t show, click the extension icon again or reload the page.</li>
+              <li>Notes are stored locally via Chrome storage; clearing browser data may remove them.</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-zincLine bg-black/30 p-6">
+            <h3 class="mb-3 font-semibold">Contact</h3>
+            <p class="text-zinc-300">
+              Email: <a href="mailto:support@miminotes.com" class="underline hover:opacity-80">support@miminotes.com</a>
+            </p>
+            <p class="text-zinc-400 mt-2 text-sm">
+              For feature requests and issues, please include your Chrome version and steps to reproduce.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy (inline for Chrome Web Store) -->
+    <section id="privacy" class="border-t border-zincLine">
+      <div class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="mb-4 text-2xl font-semibold">Privacy Policy</h2>
+        <div class="prose prose-invert max-w-none">
+          <p><strong>Effective Date:</strong> August 15, 2025</p>
+          <p>
+            MimiNotes is designed to respect your privacy. The extension stores your notes and settings using
+            Chrome’s local storage on your device. We do not collect, transmit, or sell personal data.
+          </p>
+          <h3>Data We Store</h3>
+          <ul>
+            <li>Video IDs, note text, timestamps, and minor UI preferences (e.g., sticky note position).</li>
+          </ul>
+          <h3>Data Sharing</h3>
+          <p>
+            We do not share your data with third parties. Notes remain on your device unless you export them yourself.
+          </p>
+          <h3>Permissions</h3>
+          <ul>
+            <li><code>storage</code> – to save your notes locally.</li>
+            <li><code>activeTab</code> &amp; <code>scripting</code> – to inject the sticky note UI on YouTube when you request it.</li>
+            <li><code>host_permissions</code> for <code>*.youtube.com</code> – to operate on YouTube pages.</li>
+          </ul>
+          <h3>Contact</h3>
+          <p>
+            If you have questions about this policy, contact
+            <a href="mailto:privacy@miminotes.com" class="underline">privacy@miminotes.com</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zincLine">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 text-sm text-zinc-400">
+        <p>© 2025 MimiNotes. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a
+            href="https://chrome.google.com/webstore/detail/REPLACE_WITH_STORE_ID"
+            class="hover:opacity-80"
+            target="_blank" rel="noopener noreferrer"
+          >
+            Chrome Store
+          </a>
+          <!-- Optional GitHub -->
+          <!-- <a href="https://github.com/yourrepo" class="hover:opacity-80" target="_blank" rel="noopener noreferrer">GitHub</a> -->
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

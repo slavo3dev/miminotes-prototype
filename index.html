@@ -8,7 +8,7 @@
       name="description"
       content="MimiNotes is a Chrome extension that lets you take timestamped notes on YouTube and jump back to the exact moment later."
     />
-    <link rel="icon" href="/mimi-logo.png" />
+    <link rel="icon" type="image/png" href="./mimi-logo.png" />
     <!-- Tailwind CSS (CDN for easy deploy). For production, you can prebuild if you want. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -35,7 +35,7 @@
       <div class="mx-auto max-w-6xl px-4">
         <div class="flex h-16 items-center justify-between border-b border-zincLine">
           <a href="#" class="flex items-center gap-3">
-            <img src="/mimi-logo.png" alt="MimiNotes logo" class="h-7 w-7 rounded" />
+            <img src="mimi-logo.png" alt="MimiNotes logo" class="h-7 w-7 rounded" />
             <span class="font-semibold tracking-wide">MimiNotes</span>
           </a>
           <nav class="hidden items-center gap-6 md:flex">
@@ -92,7 +92,7 @@
 
         <div class="rounded-2xl border border-zincLine bg-black/30 p-2 shadow-soft">
           <!-- Replace with your GIF/screenshot -->
-          <img src="/screenshot-hero.png" alt="MimiNotes popup and sticky note overlay" class="rounded-xl" />
+          <img src="screenshot.png" alt="MimiNotes popup and sticky note overlay" class="rounded-xl" />
         </div>
       </div>
     </section>
@@ -233,7 +233,16 @@
     <!-- Footer -->
     <footer class="border-t border-zincLine">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 text-sm text-zinc-400">
-        <p>© 2025 MimiNotes. All rights reserved.</p>
+          <p>© 2025 
+              <a href="https://slavo.io" target="_blank" rel="noopener noreferrer" class="hover:underline hover:opacity-80">
+                 slavo.io
+              </a> 
+             / 
+            <a href="https://prototypenext.com" target="_blank" rel="noopener noreferrer" class="hover:underline hover:opacity-80">
+              Prototype.NEXT
+            </a>. 
+          All rights reserved.
+        </p>
         <div class="flex items-center gap-4">
           <a
             href="https://chrome.google.com/webstore/detail/REPLACE_WITH_STORE_ID"
